@@ -1,0 +1,791 @@
+/*
+
+  LOGO Colors :
+    blue one => #06213A
+    light Yellow => #E7CC86
+    dark Yellow => #A5823D
+*/
+
+:root {
+    --blueColor:#06213A;
+    --lightYellowColor:#E7CC86;
+    --darkYellowColor:#A5823D;
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+  direction: rtl;
+  text-align: right;
+  overflow-x: hidden;
+}
+
+.logIn {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999999;
+  cursor: pointer;
+  display: none;
+}
+
+.logIn .form-wrapper {
+  background-color: #f6f6f6;
+  padding: 20px 10px;
+  border-radius: 4px;
+  width: auto;
+  margin: 0 10px;
+  cursor: default;
+}
+
+.logIn .form-wrapper .logIn-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logIn .form-wrapper .logIn-header i {
+  color: var(--darkYellowColor);
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+@media (min-width: 576px) {
+  .logIn .form-wrapper {
+    width: 500px;
+  }
+}
+
+.logIn .form-wrapper h3 {
+  color: var(--darkYellowColor);
+}
+
+.logIn form input {
+  background-color: transparent;
+}
+
+.logIn form button {
+  background-color: var(--darkYellowColor);
+  color: #fff;
+  font-weight: bold;
+}
+
+header {
+  background-color: #333;
+  color: #f6f6f6;
+}
+
+header .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .content .dropdown {
+  margin:10px 0
+}
+
+header .content button::after {
+  display: none
+}
+
+@media (max-width: 768px) {
+  header .content {
+    justify-content: center;
+    flex-direction: column;
+  }
+  header .content ul.phone-email {
+    padding-bottom: 0;
+  }
+}
+
+header .content ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0;
+  padding: 10px 0;
+  flex-wrap: wrap;
+}
+
+header .content ul li {
+  margin: 0 7px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+header .content ul li:not(:nth-child(2)):hover,
+header .content ul li:hover a {
+  color: var(--lightYellowColor);
+}
+
+header .content ul li a {color: #f6f6f6;}
+
+header .content ul li a:hover {
+  text-decoration: none;
+}
+
+/*********** start Navbar ***********/
+nav {
+  background-color: #e3e3e3;
+}
+
+.navbar-light .navbar-toggler {
+  border: 2px solid var(--darkYellowColor);
+}
+
+nav .navbar-brand h3 {
+  margin-bottom: 0;
+  color: var(--blueColor);
+  font-weight: bold;
+}
+
+.navbar-nav .nav-item {
+  margin: 0 10px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: rgb(0 0 0);
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .show > .nav-link {
+  color: #a5823d;
+}
+
+/*********** End Navbar ***********/
+
+/*********** Start Home Page Carousel ***********/
+.owl-carousel .item img {
+  object-fit: cover;
+  max-height: 600px;
+}
+/*********** End Home Page Carousel ***********/
+
+/*********** Start Why Choose Golden ***********/
+.why-choose-golden {
+  margin: 30px 0;
+  background-color: #d2d2d2;
+  padding: 20px 0;
+}
+
+.why-choose-golden h2 {
+  color: var(--darkYellowColor);
+  font-weight: bold;
+}
+/*********** End Why Choose Golden ***********/
+
+/*********** Start Services ***********/
+.services-section {
+  margin: 30px 0;
+}
+
+.services-section h2 {
+  margin-bottom: 20px;
+  color:  var(--darkYellowColor);
+  font-weight: bold;
+}
+
+.services-section .services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+
+.services-section .services .service img {
+  max-width: 100%;
+}
+
+/*********** End Services ***********/
+
+/*********** Start Footer ***********/
+
+.footer {
+  background-color: #121212;
+  padding: 30px 0 10px;
+}
+
+.footer p {
+  color: #fff;
+}
+
+.upper-footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 992px) {
+  .upper-footer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .upper-footer {
+    grid-template-columns: 1fr;
+  }
+}
+
+.upper-footer .logo {
+  display: flex;
+  flex-direction: column;
+}
+
+.upper-footer .logo img {
+  margin-bottom: 10px;
+}
+
+.upper-footer .logo p {
+  font-size: 0.9rem;
+}
+
+.upper-footer h4 {
+  margin-bottom: 20px;
+  margin-left: 50px;
+  color:  var(--lightYellowColor);
+}
+
+.upper-footer ul {
+  margin-bottom: 0;
+}
+
+.upper-footer .aboutUs-info {
+  padding-right: 0;
+}
+
+@media (min-width: 769px) {
+  .upper-footer .info {
+    margin-right: 30px;
+  }
+}
+
+.upper-footer .social-icons {
+  display: flex;
+  align-items: center;
+  padding-right: 0;
+}
+
+.upper-footer .aboutUs-info a,
+.upper-footer .aboutUs-info li,
+.upper-footer .aboutUs-info a:hover {
+  color: #f6f6f6;
+  text-decoration: none;
+}
+
+.upper-footer .aboutUs-info a:hover {
+  color: var(--lightYellowColor);
+}
+
+.upper-footer .aboutUs-info a i {
+  transition: 0.4s;
+}
+
+.upper-footer .aboutUs-info a:hover i {
+  margin-left: 5px;
+  color: var(--lightYellowColor);
+}
+
+.upper-footer .social-icons li {
+  margin-right: 5px;
+}
+
+.upper-footer .social-icons li i {
+  width: 50px;
+  color: #f6f6f6;
+  padding: 10px 6px;
+  border: 1px solid #999999;
+  transition: 0.5s;
+}
+
+.upper-footer .social-icons li i:hover {
+  background-color: #333;
+  color: var(--lightYellowColor);
+}
+
+.lower-footer p {
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+.lower-footer p span {
+  color: var(--lightYellowColor);
+  font-weight: bold;
+}
+
+/*********** End Footer ***********/
+
+/********************* Start About Page *********************/
+
+.about , .profile {
+  margin: 20px 0;
+}
+
+.about h1 , .profile h1{
+  margin-bottom: 30px;
+  font-weight: bold;
+  color: var(--darkYellowColor);
+}
+
+.about-content , .profile-content{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 992px) {
+  .about-content , .profile-content{
+    grid-template-columns: 1fr;
+  }
+  
+  .profile-content .text {
+    margin-top:20px
+  }
+}
+
+.about-content > div , .profile-content > div{
+  margin: 0 20px;
+}
+
+.about-content img , .profile-content img{
+  max-width: 100%;
+}
+
+/********************* End About Page *********************/
+
+/********************* Start Contact Page && Tasgel Gaded Page *********************/
+.tasgel-gaded .theForm .container,
+.contact .theForm .container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  justify-content: center;
+}
+
+.tasgel-gaded h1,
+.contact h1 {
+  color: var(--darkYellowColor);
+  padding-top: 20px;
+}
+
+.tasgel-gaded .theForm form,
+.contact .theForm form {
+  max-width: 800px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.tasgel-gaded .theForm label,
+.contact .theForm label {
+  font-weight: bold;
+}
+
+.tasgel-gaded .theForm label span,
+.contact .theForm label span {
+  color: #f00;
+  font-weight: bold;
+}
+
+.tasgel-gaded .theForm .btn,
+.contact .theForm .btn {
+  background-color: var(--darkYellowColor);
+  color: #fff;
+  font-weight: bold;
+}
+
+.tasgel-gaded .theForm .btn:hover,
+.contact .theForm .btn:hover {
+  background-color: rgba(165, 130, 61, 0.9);
+}
+
+.contact .time-phone-location {
+  margin: 30px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contact .time-phone-location .one-info {
+  background-color: #333;
+  padding: 20px 40px;
+  color: #f6f6f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-basis: 350px;
+  margin: 10px;
+}
+
+.contact .time-phone-location a {
+  text-decoration: none;
+  color: #f6f6f6;
+}
+
+.contact .time-phone-location i {
+  margin-bottom: 10px;
+  color: var(--lightYellowColor);
+}
+
+/********************* End Contact Page && Tasgel Gaded Page *********************/
+
+/********************* Start Packages Page *********************/
+
+.ba2at {
+  margin: 30px 0;
+}
+
+.ba2at h1 {
+  margin-bottom: 30px;
+  font-weight: bold;
+  color: var(--darkYellowColor);
+}
+
+.ba2at .packages {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  justify-content: center;
+}
+
+.ba2at .packages h4 {
+  color: var(--blueColor);
+  font-weight: bold;
+}
+
+.ba2at .packages .card , .services .card {
+  border-color:var(--blueColor)
+}
+
+.ba2at .packages p.card-text:not(.disc) {
+  font-weight: bold;
+}
+
+.ba2at .packages p.card-text.disc {
+  font-size: 1.1rem;
+}
+
+.ba2at .packages .card a.btn {
+  background-color: var(--blueColor);
+  color: #fff;
+  transition: 0.4s;
+}
+
+.ba2at .packages .card a.btn:hover {
+  background-color: rgba(6, 33, 58, 0.9);
+}
+
+/********************* End Packages Page *********************/
+
+/********************* Start Tasgel Gaded Page *********************/
+
+.tasgel-gaded .theForm input::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+  font-weight: bold;
+}
+
+.tasgel-gaded select {
+  cursor: pointer;
+}
+
+select.form-control:not([size]):not([multiple]) {
+  height: auto;
+}
+
+/********************* End Tasgel Gaded Page *********************/
+
+/********************* Start Mo3del Eladaa Page *********************/
+.eltwsiat-page {
+  background-color: #000;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.eltwsiat-page h1 {
+  color: var(--lightYellowColor);
+  font-weight: bold;
+}
+
+.eltwsiat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.eltwsiat .eltwsia {
+  margin: 20px;
+  padding: 15px 10px;
+  background-color: #343434;
+  flex-basis: 400px;
+  transition: 0.4s;
+}
+
+.eltwsiat .eltwsia:hover {
+  transform: translateY(-10px);
+}
+
+.eltwsiat .eltwsia h3 {
+  color: #e5921d;
+}
+
+.eltwsiat .eltwsia i {
+  color: #ffb800;
+}
+
+.eltwsiat .eltwsia .twsia-content {
+  margin-top: 20px;
+}
+
+.eltwsiat .eltwsia .twsia-content h3 {
+  font-weight: bold;
+  color: var(--lightYellowColor);
+}
+
+.eltwsiat .eltwsia .twsia-content p {
+  font-weight: 500;
+}
+
+.eltwsiat .eltwsia .btn {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: var(--lightYellowColor);
+  border: 2px solid var(--lightYellowColor);
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.eltwsiat .eltwsia .btn:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/********************* End Mo3del Eladaa Page *********************/
+
+/********************* Start Mo3del Eladaa Page *********************/
+.mo3dl-eladaa {
+  padding: 30px 0;
+  background-color: #000;
+}
+
+.mo3dl-eladaa h1 {
+  margin-bottom: 20px;
+  color: var(--lightYellowColor);
+  font-weight: bold;
+}
+
+.mo3dl-eladaa form {
+  margin-bottom: 20px;
+}
+
+.mo3dl-eladaa form select {
+  cursor:pointer
+}
+
+.mo3dl-eladaa form h3 {
+  color: #ffffff;
+}
+
+.mo3dl-eladaa form .col-sm {
+  margin: 10px 0;
+}
+
+.mo3dl-eladaa .btn {
+  padding: 0.64rem 0.75rem;
+  background-color: var(--blueColor);
+  color: #f6f6f6;
+  font-weight: bold;
+}
+
+.mo3dl-eladaa .btn:hover {
+  background-color: rgba(6, 33, 58, 0.5);
+}
+
+.mo3dl-eladaa .twsiat-results h3 {
+  color: #e5921d;
+}
+
+.mo3dl-eladaa .twsiat-results ul {
+  color: #f6f6f6;
+  font-size: 19px;
+  padding-left: auto;
+  padding-right: 0;
+}
+
+.mo3dl-eladaa .twsiat-results ul li {
+  margin: 10px;
+}
+
+.mo3dl-eladaa .twsiat-results ul li span {
+  color: #e5921d;
+  font-weight: bold;
+}
+
+/* Start New Table Code */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #f6f6f6;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+table th,
+table td {
+  border: 1px solid #f6f6f6;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.mo3dl-eladaa table thead {
+  background-color: var(--lightYellowColor);
+  color: #000;
+}
+
+.mo3dl-eladaa table tbody tr:nth-child(odd) {
+  background-color: #232222;
+}
+
+.mo3dl-eladaa table tbody tr:nth-child(even) {
+  background-color: #3c3c3c;
+}
+
+.mo3dl-eladaa table td i.fa-arrow-up {
+  color: #2196f3;
+}
+
+.mo3dl-eladaa table td i.fa-arrow-down {
+  color: #e91e63;
+}
+
+@media (max-width: 992px) {
+  table thead {
+    display: none;
+  }
+
+  table tr,
+  table td,
+  table tbody,
+  table {
+    display: block;
+    width: 100%;
+  }
+
+  table tr {
+    margin-bottom: 15px;
+  }
+
+  table tr td {
+    text-align: left;
+    position: relative;
+  }
+
+  table tr td::before {
+    content: attr(data-label);
+    position: absolute;
+    right: 0;
+    padding-right: 10px;
+  }
+
+  .mo3dl-eladaa table tbody tr:nth-child(odd) td:nth-child(even) {
+    background-color: #3c3c3c;
+  }
+
+  .mo3dl-eladaa table tbody tr:nth-child(even) td:nth-child(odd) {
+    background-color: #232222;
+  }
+}
+
+/* End New Table Code */
+
+/********************* End Mo3del Eladaa Page *********************/
+
+/********************* Start Profile Page *********************/
+
+.profile {
+  min-height: calc(100vh - 373px);
+}
+
+.profile-content{
+  align-items: center;
+}
+
+.profile-content div.img {
+  display: flex;
+  justify-content: center;
+
+}
+
+.profile-content img {
+  width:300px;
+  height:300px;
+  border-radius: 50%;
+  object-fit: cover
+}
+
+.profile ul li{
+  margin:15px 0
+}
+
+.profile ul li span {
+  color:var(--blueColor);
+  font-weight: bold;
+}
+
+/********************* End Profile Page *********************/
+
+/********************* Start Error 404 Page *********************/
+.error404 {
+    width:100vw;
+    height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+}
+
+
+.error404 .container > *:not(:last-child){
+    margin:10px 0
+}
+
+.error404 h1 {
+    font-size:calc(10vw + 30px);
+    letter-spacing: -1px
+}
+
+.error404 h1 span{
+    color:var(--blueColor);
+    letter-spacing: 3px
+}
+
+.error404 p {
+    font-size:2rem
+}
+
+.error404 .btn {
+    background-color: #A5823D;
+    color: #fff;
+    font-weight: bold;
+}
+
+
+/********************* End Error 404 Page *********************/
+
+
+
+
+
+
